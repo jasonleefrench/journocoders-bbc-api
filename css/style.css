@@ -18,3 +18,27 @@ img{
 .leader{
   padding: 20px;
 }
+
+.david-cameron .panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.ed-miliband .panel-heading{
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.nick-clegg .panel-heading{
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.nigel-farage .panel-heading{
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
