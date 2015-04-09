@@ -9,7 +9,7 @@ Does what it says on the tin.
 Todos?
 ------
 
-- Use Bootstrap's [panels](http://getbootstrap.com/components/#panels-alternatives) instead of paragraphs
+- ~~Use Bootstrap's [panels](http://getbootstrap.com/components/#panels-alternatives) instead of paragraphs~~
 - Put the data in some kind of fixed order (make Clegg last)
 - Make loading/progress bar
 - Add `{party-leader}` + kitten functionality

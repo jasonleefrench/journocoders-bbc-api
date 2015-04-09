@@ -9,7 +9,10 @@ $(document).ready(function(){
       var items = [];
       $.each(data.hits, function(key, val){
         // Strange. Some entries don't have titles/content. We just want the ones that do!
-        if (val.title) items.push("<p><a target='_blank' href='" + val.url + "'>" + val.title + "</a> (source: " + val.source['source-name'] + ")</p>");
+        if (val.title){
+          var htmlString = "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'><a target='_blank' href='" + val.url + "'>" + val.title + "</a> (source: " + val.source['source-name'] + ")</h3></div><div class='panel-body'>" + val.description + "</div></div>";
+          items.push(htmlString);
+        }
       });
       $("<div>", {
         html: items.join(""),
