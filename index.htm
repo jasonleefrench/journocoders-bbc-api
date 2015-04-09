@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>API with jQuery</title>
+  <title>Recent articles about (some) party leaders</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -15,32 +15,6 @@
       <h1>Recent articles about (some) party leaders</h1>
     </div>
   </div>
-  <script>
-  $(document).ready(function(){
-
-    var leaders  = ['David%20Cameron','Ed%20Miliband','Nick%20Clegg','Nigel%20Farage'],
-        apikey   = 'YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi',
-        queryURL = "http://data.test.bbc.co.uk/bbcrd-juicer/articles?q=";
-
-    function getResults(query,leader){
-      query = query + '&apikey=' + apikey;
-      $.getJSON(query, function(data){
-        var items = [];
-        $.each(data.hits, function(key, val){
-          // Strange. Some entries don't have titles/content. We just want the ones that do!
-          if (val.title) items.push("<li><a target='_blank' href='" + val.url + "'>" + val.title + "</a> (source: " + val.source['source-name'] + ")</li>");
-        });
-        $("<ul />", {
-          html: items.join("")
-        }).appendTo(".container");
-      });
-    }
-
-    for(var i = 0; i < leaders.length; i++){
-      getResults(queryURL + leaders[i], leaders[i]);
-    }
-
-  });
-  </script>
+  <script src="js/init.js"></script>
 </body>
 </html>
