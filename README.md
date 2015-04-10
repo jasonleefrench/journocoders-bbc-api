@@ -10,8 +10,8 @@ Todos?
 ------
 
 - ~~Use Bootstrap's [panels](http://getbootstrap.com/components/#panels-alternatives) instead of paragraphs~~
-- Put the data in some kind of fixed order (make Clegg last)
-- Make loading/progress bar
+- ~~Put the data in some kind of fixed order (make Clegg last)~~
+- ~~Make loading/progress bar~~
 - Add `{party-leader}` + kitten functionality
-- Add other party leaders (unlikely, because it'll make a lie of the title of the project)
-- idk eat some cake
+- ~~Add other party leaders~~ (unlikely, because it'll make a lie of the title of the project)
+- ~~idk eat some cake~~

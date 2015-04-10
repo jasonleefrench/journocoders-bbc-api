@@ -1,14 +1,11 @@
 $(document).ready(function(){
-
-  var leaders  = ['David%20Cameron','Ed%20Miliband','Nick%20Clegg','Nigel%20Farage'],
+  //Haha Clegg you're last. (other leader positions may not reflect the political beliefs of the author)
+  var leaders  = ['David%20Cameron','Ed%20Miliband','Nigel%20Farage','Nick%20Clegg'],
       apikey   = 'YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi',
       queryURL = "http://data.test.bbc.co.uk/bbcrd-juicer/articles?apikey=" + apikey + "&recent_first=true&q=";
 
-  function prettyStr(str) {
-    return str.replace('%20','-').toLowerCase();
-  }
-
   function getResults(query,leader) {
+    $('.container').append("<div class='" + prettyStr(leader) + "'></div>");
     $.getJSON(query, function(data) {
       var items = [];
       $.each(data.hits, function(key, val){
@@ -30,14 +27,16 @@ $(document).ready(function(){
           items.push(htmlString);
         }
       });
-      $("<div>", {
-        html: items.join(""),
-        class: 'leader ' + prettyStr(leader)
-      }).appendTo(".container");
+      $('.' + prettyStr(leader)).append(items.join(""));
     });
   }
 
+  function prettyStr(str) {
+    return str.replace('%20','-').toLowerCase();
+  }
+
   for (var i = 0; i < leaders.length; i++){
+
     getResults(queryURL + leaders[i], leaders[i]);
   }
 
