@@ -36,7 +36,6 @@ $(document).ready(function(){
   }
 
   for (var i = 0; i < leaders.length; i++){
-
     getResults(queryURL + leaders[i], leaders[i]);
   }
 
