@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //Haha Clegg you're last. (other leader positions may not reflect the political beliefs of the author)
-  var leaders  = ['David%20Cameron','Ed%20Miliband','Nigel%20Farage','Nick%20Clegg'],
+  var leaders  = ['David%20Cameron','Jeremy%20Corbyn','Nigel%20Farage','Nick%20Clegg'],
       apikey   = 'YB0MY3VMHyllzPqEf5alVj5bUvGpvDVi',
       queryURL = "http://data.test.bbc.co.uk/bbcrd-juicer/articles?apikey=" + apikey + "&recent_first=true&q=";
 
