@@ -2,7 +2,7 @@
 
 Built as an exercise in using the BBC's Juicer API during April's Journocoders.
 
-Does what it says on the tin.
+~~Does what it says on the tin.~~ or it did, before it broke 😐 I think the api's busted.
 
 [Tutorial on BBC's Juicer API](https://github.com/basilesimon/using-an-api-tutorial/blob/master/tutorial.md)
 
